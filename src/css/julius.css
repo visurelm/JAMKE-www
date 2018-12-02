@@ -1,0 +1,38 @@
+
+p {
+		font-family: Palatino Linotype, Book Antiqua;
+}
+
+	
+
+#temppu {
+    width: 100px;
+    height: 100px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZO2j9as1mCbCSeIlmLSybjoqzwYf-KbF8xuZxAVvn_Nt_629e5Q");
+	background-size: 50%;
+    position: relative;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 12s infinite;
+}
+
+
+
+@-webkit-keyframes mymove {
+    0%   {background-color:white; transform:scaleX(-1); left:80%; top:0px;}
+    50% {background-color:white; left:0px; top:0px;}
+    100%   {background-color:white; left:80%; top:0px;}
+}
+
+
+@keyframes mymove {
+    0%   {background-color:white; transform:scaleX(-1); left:80%; top:0px;}
+    50% {background-color:white; left:0px; top:0px;}
+    100%   {background-color:white; left:80%; top:0px;}
+}
+
+table, th, td{
+    border: 1px solid black;
+    padding: 5px;
+	
+	
+}
