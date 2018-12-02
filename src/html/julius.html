@@ -1,13 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Julius</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/src/css/style.css">
+<meta charset="UTF-8">
+<title>JULIUS </title>
+<LINK rel="stylesheet" type="text/css" href="muotoilu.css">
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale =1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<Body onkeyup="laskeRiviSummat(event)">
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="etusivu.html">Etusivu</a></li>
+                <li><a href="anu.html">Anu</a></li>
+                <li><a href="elmo.html">Elmo</a></li>
+                <li><a href="julius.html">Julius</a></li>
+                <li><a href="mari.html">Mari</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="container">
+  <h2>Jamke fanikauppa</h2>
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#Tuote">Tuotteet</a></li>
+		<li><a data-toggle="tab" href="#liity">Liity jäseneksi</a></li>
+		<li><a data-toggle="tab" href="#Tilaa">Tilaa</a></li>
+	</ul>
+
+	
+ <div class="tab-content">
+    <div id="Tuote" class="tab-pane fade in active">
+      <h3>Tuotteet</h3>
+		<p class="col-xs-12 col-sm-6 col-md-6">Liity Jamke fanikerhoon ja tilaa talven tyylikkäimmät vaatteet ja erotu joukosta! </p>
+	    <div  class="tabcontent"  id="Tuotteet">
+   <br>
+   <br>
+   <br>
+		<p class="col-xs-12 col-sm-6 col-md-6">Vaatteet ovat viileää, pehmeää ja kevyttä 100% puuvillaa. Niissä
+		on väljä leikkaus ja miellyttävä, vahvistettu niskasauma. 
+		Neulos on putkeen kudottu, se on esikutistettu ja on hyvin ryhtinsä säilyttävä. Jamken itse suunnittelemat kengät on suunniteltu muotoutumaan jalan muotojen mukaisesti ja ovat tehty kestämään keliä kuin keliä!
+		<br><br>Katso kuvat tuotteista painikkeiden kautta</p>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+ <div class="btn-group" class="col-xs-12 col-sm-6 col-md-6">
+    <a href="#" type='button' class="btn btn-primary" class="list-group-item"onclick="showPicture1()">Paita</a>
+    <a href="#" type='button' class="btn btn-primary" class="list-group-item"onclick="showPicture2()">Housut</a>
+    <a href="#" type='button' class="btn btn-primary" class="list-group-item"onclick="showPicture3()">Kengät</a>
+ </div>
+ </div>
+ 
+ 
+<div id="paita">
+<img style="display:none;" id="pic" src="pic"  width="400" height="300"/>
+<img style="display:none;" id="pic2" src="pic"  width="400" height="300"/>
+<img style="display:none;" id="pic3" src="pic"  width="400" height="300"/>
+</div>
+	  
+	  
+	  
+</div>
+    <div id="liity" class="tab-pane fade">
+      <h3>Liity faniksi</h3>
+      
+	  	  <div id="temppu"> </div>
+	  <p class="col-xs-12 col-sm-6 col-md-6">Liity jamke fanikerhon jäseneksi antamalla sähköpostiosoitteesi, nimesi ja kotiosoitteesi tilauslomakkeen kautta. Jäseneksi liittyminen ei vaadi tuotteiden ostamista. Liittymällä saat huimia tarjouksia uusimmista jamke fani tuotteista, sekä osallistut Jamken
+	  unelmien lomamatka arvontaan!
+	  </p>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	  <br><p class="col-xs-12 col-sm-6 col-md-6">
+	  Testaa Jamke nimesi! Syötä kenttää "Etunimi Sukunimi".</p><Br><br>
+  <input id="nimi" type="text">
+  <br><br>
+  <value=""autofocus/> 
+  <button onclick="muutaNimi();">Jamke nimesi!</button>
+
+</div>
+
+  
+  
+<div id="Tilaa" class="tab-pane fade">	  
+<div id="Ostoskori" class="tabcontent">
+	<form action= "https://wwwkayttoliittyma.appspot.com/printvalues"method="post">
+		<div class="row">
+			<table class="table-striped table-dark" width="85%">
+				<tr>
+					<td colspan="7" style="text-align:center"><h2>Tilaa talven kuumimmat tuoteet tästä!</h2></td>
+				</tr>
+					<th>TuoteID</th>
+					<th>Tuote</th> 
+					<th>Määrä</th>
+					<th>Hinta</th>
+					<th>Yhteensä</th>
+				  </tr>
+				  <tr>
+				<tr>
+					<th>1</th>
+					<th>Housut</th>
+					<th><input type='button' class="btn btn-primary btn-xs" name='miinus' value='-' onclick="vahenna('luku1', 'hinta1', 'summa1');">
+					<input class="form-control" id='luku1' type='text' name='luku1' value='0'>
+					<input type='button' class="btn btn-primary btn-xs" name='plus' value='+' onclick="lisaa('luku1', 'hinta1', 'summa1');"></th>
+					<th><input class="form-control" id='hinta1' type='text' name='hinta1' value='55' readonly></th>
+					<th><input class="form-control" id='summa1' type='text' name='summa1' value='0'></th>
+				</tr>
+				<tr>
+					<th>2</th>
+					<th>Paita</th>
+					<th><input type='button' class="btn btn-primary btn-xs" name='miinus' value='-' onclick="vahenna('luku2', 'hinta2', 'summa2');">
+					<input class="form-control" id='luku2' type='text' name='luku2' value='0'>
+					<input type='button'class="btn btn-primary btn-xs" name='plus' value='+' onclick="lisaa('luku2', 'hinta2', 'summa2');"></th>
+					<th><input class="form-control" id='hinta2' type='text' name='hinta2' value='25' readonly></th>
+					<th><input class="form-control" id='summa2' type='text' name='summa2' value='0'></th>
+				</tr>
+				<tr>
+					<th>3</th>
+					<th>Kengät</th>
+					<th><input type='button' class="btn btn-primary btn-xs" name='miinus' value='-' onclick="vahenna('luku3', 'hinta3', 'summa3');">
+					<input class="form-control" id='luku3' type='text' name='luku3' value='0'>
+					<input type='button' class="btn btn-primary btn-xs" name='plus' value='+' onclick="lisaa('luku3', 'hinta3', 'summa3');"></th>
+					<th><input class="form-control" id='hinta3' type='text' name='hinta3' value='75' readonly></th>
+					<th><input class="form-control" id='summa3' type='text' name='summa3' value='0'></th>
+				</tr>
+				<tr>
+				<th colspan="4">Yhteensä:
+				</th>
+				<th> <input class="form-control" id='summa' type='text' name='summa' value=''>
+				</th>
+				</tr>
+				</tr>
+				<tr>
+				<th colspan="2">Sähköposti:
+				</th>
+				<th colspan="3"> <input class="form-control" id='sposti' type='text' name='sahkoposti' placeholder="sposti" value=""" required>
+				</th>
+				</tr>
+				<tr>
+				<th colspan="2">Nimi:
+				</th>
+				<th colspan="3"> <input class="form-control" id='nimi' type='text' name='nimi' placeholder="Matti Meikäläinen" value=""" required>
+				</th>
+				</tr>
+				<tr>
+				<th colspan="2">Toimitusosoite:
+				</th>
+				<th colspan="3"> <input class="form-control" id='osoite' type='text' name='osoite' placeholder="Osoite" value=""" required>
+				</th>
+				</tr>
+			</table>
+				<input type="radio" name="liity" id="liityfaniksi"> Liity Faniksi<br>
+				<input class="btn btn-primary btn-s"type='reset' value='Palauta'>
+				<input class="btn btn-primary btn-s" type='submit' name='ok' value='Tilaa'>
+				</div>
+				</div>
+
+	</form>
+	<script src="../js/julius.js"></script>
+
 
 </body>
 </html>
