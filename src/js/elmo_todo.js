@@ -3,7 +3,7 @@ $(document).ready(function(){
     var items = getFromLocal('memos');
     var index;
     loadList(items);
-    // if input is empty disable button
+
     $('button').prop('disabled', true);
     $('input').keyup(function(){
         if($(this).val().length !== 0) {
@@ -12,7 +12,7 @@ $(document).ready(function(){
             $('button').prop('disabled', true);
         }
     });
-    // bind input enter with button submit
+    // Enter näpytin
     $('#main-input').keypress(function(e){
         if(e.which === 13) {
             if ($('#main-input').val().length !== 0)
@@ -26,10 +26,9 @@ $(document).ready(function(){
         $('#main-input').val('');
         loadList(items);
         storeToLocal('memos', items);
-        // set button to
         $('button').prop('disabled', true);
     });
-    // delete one item
+    // Poista listalta
     $('ul').delegate("span", "click", function(event){
         event.stopPropagation();
         index = $('span').index(this);
@@ -39,7 +38,7 @@ $(document).ready(function(){
 
     });
 
-    // edit panel
+    // Muokkaus
     $('ul').delegate('li', 'click', function(){
         index = $('li').index(this);
         var content = items[index];
@@ -53,7 +52,7 @@ $(document).ready(function(){
         storeToLocal("memos", items);
     });
 
-    // loadList
+    //Hae lista
     function loadList(items){
         $('li').remove();
         if(items.length > 0) {

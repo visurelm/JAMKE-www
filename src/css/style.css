@@ -22,3 +22,11 @@ span:hover{
     text-align: center;
     float: bottom;
 }
+footer{
+    background-color: lightgray;
+}
+
+.footerText{
+    float: left;
+    color: azure;
+}
