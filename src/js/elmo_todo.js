@@ -58,7 +58,7 @@ $(document).ready(function(){
         $('li').remove();
         if(items.length > 0) {
             for(var i = 0; i < items.length; i++) {
-                $('ul').append('<li class= "list-group-item" data-toggle="modal" data-target="#editModal">' + items[i] + '<span class="glyphicon glyphicon-remove"></span</li>');
+                $('ul').append('<li class= "list-group-item" data-toggle="modal" data-target="#editModal" title="Muokkaa">' + items[i] + '<span class="glyphicon glyphicon-remove" title="Poista"></span</li>');
             }
         }
     };

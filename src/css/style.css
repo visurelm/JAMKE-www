@@ -1,9 +1,15 @@
 li:hover {
     background-color: tomato;
-    transition: 0.7s;
+    transition: 0.5s;
     cursor: pointer;
 }
 
 span{
     float: right;
+    text-align: center;
+}
+span:hover{
+    background-color: blue;
+    transition: 0.5s;
+    cursor: pointer;
 }
