@@ -13,3 +13,12 @@ span:hover{
     transition: 0.5s;
     cursor: pointer;
 }
+
+.elmonOtsikko{
+    text-align: center;
+}
+
+.elmonTeksti{
+    text-align: center;
+    float: bottom;
+}
