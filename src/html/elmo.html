@@ -2,12 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale =1">
     <title>Elmo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="../js/elmo_todo.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
 
+<body>
+<div class="container" style="margin-top:30px;">
+    <div class="col-sm-offset-3 col-sm-6">
+        <h1>Elmon muistilista</h1>
+        <ul class="list-group ">
+        </ul>
+
+        <div class="form-group">
+            <input id="main-input" type="text" class="form-control" placeholder="Mitäs lisätään">
+        </div>
+
+        <button type="button" class="btn btn-success" id="main-button">Lisää</button>
+    </div>
+
+    <div class="modal fade" id="editModal" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">poista</span></button>
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                    <h4 class="modal-title">Edit</h4>
+                </div>
+
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="edit-input">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="edit-button" data-dismiss="modal">Save changes</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
 </body>
 </html>
